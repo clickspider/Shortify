@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.51a00074bcbf477b4624a2a0eacbad9f.js"
+  "/precache-manifest.faab69a6777de74ac428eee409715b7e.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "shortify"});
