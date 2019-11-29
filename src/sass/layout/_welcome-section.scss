@@ -1,0 +1,46 @@
+.welcome-section {
+    .row {
+
+        @media #{$break3},
+        #{$break4},
+        #{$break2} {
+
+            align-items: center;
+        }
+    }
+
+    .row {
+        @media #{$break1} {
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+    .heading-primary {
+        @media #{$break1} {
+            margin-top: 37px;
+            margin-bottom: 23px;
+        }
+    }
+
+    .heading-secondary {
+        @media #{$break1} {
+            margin-bottom: 36px;
+        }
+    }
+
+    &__img-mobile {
+        margin-top: 29px;
+    }
+
+}
+
+.welcome-section {
+
+    @media #{$break3},
+    #{$break4} {
+        margin-top: 78px;
+    }
+}

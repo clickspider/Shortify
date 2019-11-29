@@ -1,0 +1,243 @@
+.mobile-navigation {
+    position: relative;
+    font-size: 18px;
+    text-align: center;
+
+
+
+    hr {
+        width: 80%;
+        border-top: 1px solid #adb5bd2e;
+        margin: 25px auto;
+    }
+
+    &__logo {}
+
+    .nav-link {
+        color: $color-white;
+
+        &:hover {
+            color: $color-gray--2;
+        }
+
+
+    }
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__button {
+        background-color: transparent;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-left: auto;
+    }
+
+
+    &__nav {
+        display: none;
+        opacity: 0;
+        transition: all .8s;
+
+
+    }
+
+    &__list {}
+
+    &__item {}
+
+    .nav-item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    &__link {
+
+        &:link,
+        &:visited {
+            display: inline-block;
+            font-size: 3rem;
+            font-weight: 300;
+            padding: 1rem 2rem;
+            color: $color-primary;
+            text-decoration: none;
+            text-transform: uppercase;
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-primary 50%);
+            background-size: 300%;
+            transition: all .4s;
+
+            span {
+                margin-right: 1.5rem;
+                display: inline-block;
+            }
+        }
+
+        &:hover,
+        &:active {
+            background-position: 100%;
+            color: $color-white;
+            transform: translateX(1rem);
+        }
+    }
+
+
+    //FUNCTIONALITY
+    &__checkbox:checked~&__background {
+        // transform: scale(80);
+        // background-color: $color-primary-2;
+    }
+
+    &__checkbox:checked~&__nav {
+        position: absolute;
+        top: -15%;
+        left: 50%;
+        transform: translate(-50%, 15%);
+
+        display: block;
+        padding: 40px 0;
+        opacity: 1;
+        width: 95%;
+        border-radius: 10px;
+        background-color: $color-primary-2;
+        transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+        z-index: 1000;
+    }
+
+
+    //ICON
+    &__icon {
+        position: relative;
+        top: 15px;
+
+        &,
+        &::before,
+        &::after {
+            width: 24px;
+            height: 3px;
+            background-color: $color-gray--2;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+        }
+
+        &::before {
+            top: -7px;
+        }
+
+        &::after {
+            top: 7px;
+        }
+    }
+
+    &__button:hover &__icon::before {
+        top: -10px;
+    }
+
+    &__button:hover &__icon::after {
+        top: 10px;
+    }
+
+    // &__checkbox:checked+&__button {
+    //     border: 4px solid $color-gray--2;
+    //     top: -5rem;
+    //     left: 1.5rem;
+    // }
+
+    &__checkbox:checked+&__button &__icon {}
+
+    // &__checkbox:checked+&__button &__icon::before {
+    //     top: 0;
+    //     transform: rotate(135deg);
+    // }
+
+    // &__checkbox:checked+&__button &__icon::after {
+    //     top: 0;
+    //     transform: rotate(-135deg);
+    // }
+
+    .btn {
+        font-size: 18px;
+        margin: 0 auto;
+    }
+}
+
+
+
+.navbar {
+
+    .nav-link {
+        color: $color-gray--2;
+
+        &:hover {
+            color: $color-darkBlue;
+        }
+    }
+
+    .nav-item:not(:last-child) {
+
+        @media #{$break3},
+        #{$break4} {
+            margin-right: 29px;
+        }
+        
+    }
+
+    @media #{$break2} {
+        li {
+            margin: .5rem;
+        }
+    }
+
+    @media #{$break1} {
+        img {
+            height: 3rem;
+        }
+
+        li {
+            margin: 1.5rem
+        }
+    }
+
+    .container {
+        justify-content: start;
+    }
+
+    .navbar-btns {
+        margin-left: auto;
+
+
+        @media #{$break3},
+        #{$break4} {
+            a:not(:last-child) {
+                margin-right: 21px;
+            }
+        }
+    }
+
+    .navbar-brand {
+        margin-right: 45px;
+    }
+}
+
+
+
+.navbar,
+.mobile-navigation {
+
+    @media #{$break3},
+    #{$break4} {
+        font-size: 15px;
+    }
+
+    @media #{$break1}, #{$break2} {
+        font-size: 18px;
+    }
+}
